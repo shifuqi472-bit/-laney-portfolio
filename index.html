@@ -817,8 +817,8 @@ var FILMS = [
   { id:"film-01", cat:"film", en:"TIANBENG", cn:"《天崩》", duration:"122.9s", orient:"landscape", note:"民间故事题材 AI 电影，屠夫磨刀开场，猪眼特写、黄河空镜、古卷与八只羊依次入画，完整叙事在单条片内闭环。美学取宽屏电影构图与低饱和调色，意象先于情节说明，人物与年代质感贯穿全片。宽屏，122.9 秒。" }
 ];
 FILMS.forEach(function(f){
-  f.src = "assets/videos/" + f.id + ".mp4";
-  f.poster = "assets/frames/" + f.id + ".jpg";
+  f.src = f.id + ".mp4";
+  f.poster = "frames/" + f.id + ".jpg";
   f.catIdx = FILMS.filter(function(x){ return x.cat === f.cat; }).indexOf(f);
   f.catTotal = FILMS.filter(function(x){ return x.cat === f.cat; }).length;
 });
